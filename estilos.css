@@ -1,0 +1,690 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/**/
+body{
+    margin-left: 0px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+/*CABECERA*/
+nav h1{
+    position: relative;
+    top: 25px;
+    color: white;
+    margin-left: 80px;
+    text-align: center;
+    overflow: hidden;
+
+    
+}
+nav{
+    height: 80px;
+    display: block;
+    width: 100%;
+    background-color: dodgerblue;
+    overflow: hidden;
+
+}
+nav .menu-1{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    
+    margin-left: 20px;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-top-left-radius: 40%;
+    cursor: pointer;
+}
+/*TERMINA CABACERA*/
+/*ESTILOS DEL MENU*/
+.menu{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background-color: coral;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    margin-left: -200px;
+    overflow-y: scroll;
+    transition: .5s;
+}
+/*Ocultar scroll para chrome, safari y opera*/
+.menu::-webkit-scrollbar{
+    display: none;
+}
+.menu::-webkit-scrollbar{
+    display: none;
+
+}
+.menu ul{
+    position: relative;
+    margin-top: 30px;
+    
+}
+.menu li[id="pr"]{
+    cursor: default;
+}
+.menu li{
+    width: 250px;
+    display: inline-flex;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: .6s;
+
+}
+
+.menu li h3{
+    margin-left: 20px;
+    margin-top: 9px;
+    font-size: 15px;
+    color: white;
+    padding-left: 5px;
+}
+.menu li img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 5px;
+}
+.menu li:hover{
+    background-color: #ff3f04;
+}
+/*TERMINA ESTILOS DE MENU*/
+/*ESTILOS DE JAVA SCRIPT*/
+.body2{
+    margin-left: 200px;
+}
+.menu2{
+    left: 200px;
+}
+.login2{
+    left: 0px;
+}
+
+
+/*TERMINA ESTILOS DE JAVA SCRIPT*/
+/*login*/
+main{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    overflow-y:scroll ;
+    background-image: url("fondos/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.cont-formulario{
+    top: 100px;
+    left: 350px;
+    position: relative;
+    display: flex;
+    width: 700px;
+    height: 300px;
+    background-color: rgb(38, 90, 252, 0.9);
+    border-radius: 10%;
+    overflow: hidden;
+    transition: .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    margin-bottom: 100px;
+}
+.ir-login{
+    color: white;
+    height: 100%;
+    width: 350px;
+    top: 0;
+    position: absolute;
+    box-shadow: 0 0 15px red;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 40px ;
+    z-index: -1;
+    opacity: 0;
+    transition: 2.5s;
+}
+.ir-registrar{
+    color: white;
+    height: 100%;
+    width: 350px;
+    left: 0;
+    box-shadow: 0 0 15px red;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 40px ;
+    z-index: 1;
+    opacity: 1;
+    transition: 2.5s;
+}
+.titulo-lg{
+    text-align: center;
+}
+.info-lg{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.boton{
+    position: relative;
+    margin-top: 40px;
+    left: 130px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.boton:hover{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 20px red;
+    border-radius: 10%;
+}
+.registrar-form{
+    position:absolute;
+    height: 100%;
+    width: 350px;
+    left: 400px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 40px ;
+    z-index: -1;
+    opacity: 0;
+    transition: .6s;
+}
+.login-form{
+    position:absolute;
+    height: 100%;
+    width: 350px;
+    left: 400px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 40px ;
+    z-index: 1;
+    opacity: 1;
+    transition: 1.5s;
+}
+.login-titu{
+    margin-bottom: 20px;
+    
+}
+.registrar-titu{
+    margin-bottom: 20px;
+    position: relative;
+    left: 30px;
+}
+.registrar-form input[id="users"], input[id="passe"]{
+    position: relative;
+    width: 200px;
+    display: flex;
+    height: 40px;
+    left: 20px;
+    border: none;
+    background-color: rgb(237, 74, 30 ,0.5 );
+    margin-bottom: 30px;
+    color: white;
+}
+.registrar-form input[id="users"]::placeholder,input[id="passe"]::placeholder{
+
+    color: white;
+  text-align: center;
+}
+.login-form input[id="user-l"],input[id="pass-l"]{
+    position: relative;
+    width: 200px;
+    display: flex;
+    height: 40px;
+    left: 20px;
+    border: none;
+    background-color: rgb(237, 74, 30 ,0.5 );
+    margin-bottom: 30px;
+    color: white;
+}
+.login-form input[id="user-l"]::placeholder,input[id="pass-l"]::placeholder{
+    color: white;
+    text-align: center;
+}
+.registrar-form input[value="REGISTRAR"]{
+left: 40px;
+height: 40px;
+width: 150px;
+position: relative;
+cursor: pointer;
+background-color:rgba(240, 28, 13, 0.555) ;
+color: white;
+transition: .5s;
+}
+.login-form  input[value="LOGIN"]{
+ left: 40px;
+height: 40px;
+width: 150px;
+position: relative;
+cursor: pointer;
+background-color:rgba(240, 28, 13, 0.555) ;
+color: white;
+transition: .5s;
+}
+.login-form  input[value="LOGIN"]:hover{
+    background-color: rgba(189, 4, 245, 0.719);
+    font-size: 20px;
+}
+.registrar-form input[value="REGISTRAR"]:hover{
+    background-color: rgba(189, 4, 245, 0.719);
+    font-size: 20px;
+}
+/*termino login*/
+/*ESTILOS DEL INDEX*/
+.hc{
+    position: absolute;
+    text-align: center;
+    width: 900px;
+    height: 557px;
+    background-color: rgba(2, 130, 230,0.8);
+    color: white;
+    left: 200px;
+    border: 4px solid #eb0f0f;
+   overflow: auto; /* Permite scroll tanto horizontal como vertical */
+
+}
+.hc::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+
+/*estilos de busqueda */
+.bsw{
+   
+    position: absolute;
+    text-align: center;
+    width: 900px;
+    height: 557px;
+    background-color: rgba(2, 130, 230,0.8);
+    color: white;
+    left: 200px;
+    border: 4px solid #eb0f0f;
+   overflow: auto; /* Permite scroll tanto horizontal como vertical */
+
+}
+.bsw input[name="bsc"]{
+    position: relative;
+    top: 50px;
+    width: 350px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(4, 245, 68, 0.39); 
+    transition: 3s;
+}
+.bsw input[name="bsc"]::placeholder{
+    text-align: center;
+    color: white;
+}
+.agre1{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    left: 650px;
+    top: 30px;
+    transition: 3s;
+}
+.agre1:hover{
+    cursor: pointer;
+}
+.agre3{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    left:700px;
+    top:30px;
+    transition: 3s;
+}
+.agre3:hover{
+    cursor: pointer;
+}
+.mt2{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    left:50px;
+    top:30px;
+    transition: 3s;
+}
+.mt2:hover{
+    cursor:pointer;
+}
+.mt{
+    position: absolute;
+ 
+    width: 300px;
+    top: 80px;
+    border-radius: 20px;
+    left: 100px;
+    height: 30px;
+
+}
+.ma{
+    position: absolute;
+    height: 30px;
+    width: 300px;
+    top: 140px;
+    border-radius: 20px;
+    left: 100px;
+
+}
+.fl{
+    position: absolute;
+    top: 190px;
+    left: 100px;
+ 
+}
+.mt::placeholder,.ma::placeholder{
+    text-align: center;
+}
+.contenedor{
+    min-height: 300px;
+}
+/*TERMINO DE ESTILOS DE INDEX*/
+/*responsive*/
+
+/*ESTILOS DE MENU ADMINISTRADOR*/
+.sub-con{
+    position: relative;
+    left: 0px;
+    height: 0px;
+    transition: 4s;
+   
+}
+.sub-con li{
+  position: relative;
+  margin-bottom:2px;
+  left: -80px;
+  margin-top: 19px;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100px;
+  height: 30px;
+  padding-left: 20px;
+  font-size: 15px;
+  overflow: hidden;
+  padding-top: 4px;
+
+
+}
+.sub-con li:hover{
+    background-color: #0E09B2;
+}                               
+.menu li[id="mod"]{
+    overflow: hidden;
+    cursor: pointer;
+    height: auto;
+    margin-bottom: 50px;
+    transition: 1.5s;
+
+}
+.sub2{
+    height: auto;
+}
+
+/*TERMINO DE ESTILO DE MENU ADMIN*/
+/*permisos ad*/
+.fondo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    overflow-y:scroll ;
+    background-image: url("fondos/fondoad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/*datos1 = tabla de usuarios*/
+.datos1{
+   
+    position: absolute;
+    top: 150px;
+    max-height: 300px;
+    background-color: white;
+    height: auto;
+    width: auto;
+   left: 50%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: 4s;
+    transform: translateX(-35%);
+}
+.datos1::-webkit-scrollbar{
+    display: none;
+}
+.datos1::-webkit-scrollbar{
+    display: none;
+
+}
+
+
+
+.fondo::-webkit-scrollbar{
+    display: none;
+}
+.fondo::-webkit-scrollbar{
+    display: none;
+
+}
+
+.datos1 td{
+text-align: center;
+width: 100px;
+height: auto;
+border: black 3px solid;
+color: black;
+}
+.fondo h1{
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 20px red, 0 0 50px red, 0 0 100px red;
+}
+.info{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   
+}
+.inf{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px wheat;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    left: 30px;
+
+}
+.inf:hover{
+    width: 80px;
+    height: 80px;
+}
+.edit{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.datos{
+    position:absolute ;
+    top: 240px;
+    left: 50%;
+    color:red;
+    font-size: 40px;
+    transition: .5s;
+    transform: translate(-50%);
+
+}
+.btn{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.btn:hover{
+    background-color: darkred;
+}
+/*estilos de sweet alert validacion de campos*/
+.validacion{
+    background-color:  transparent;
+    color: white;
+}
+input[id="pass"],input[id="newpass"]{
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 0.5px solid black;
+    position: relative;
+}
+input[id="pass"]::placeholder{
+    color: rgb(64, 64, 64,0.7);
+
+}
+input[id="newpass"]::placeholder{
+    text-align: center;
+    color: rgb(64, 64, 64,0.7);
+}
+input[id="newpass"]:hover{
+    border: 0.5px solid black;
+}
+.validacion{
+    font-size: 20px;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.at {
+    display: block;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    margin-top:10px ;
+    text-shadow: 6px 6px 6px rgba(222, 8, 8, 1.0);
+}
+/*temino de permisos ad*/
+/*pantalla de 1000px a 777px de ancho */
+@media(max-width:1190px){
+    .cont-formulario{
+        left: 100px;
+    }
+    .hc{
+      
+       width: 600px;
+        left: 150px;
+    }
+   .bsw{
+    left: 50%; /* Ajustamos la posición para pantallas más pequeñas */
+    transform: translateX(-50%); /* Centrado horizontal */
+    max-width: 90%; /* Aseguramos que el ancho máximo se ajuste para pantallas más pequeñas */
+    transition: 3s;
+   }
+    .datos1 {
+        left: 50%;
+        transform: translateX(-60%);
+        transition: 3s;
+    }
+    .bsw input[id="buscar"]{
+        left: 3%;
+        transform: translateX(-40%);
+        transition: 3s;
+        max-width: 90%;
+    }
+    .agre1{
+        left: 50%;
+        transform: translateX(70px);
+       
+      transition: 3s;
+    }
+    
+}
+/*temino de pantallas de 1000px a 414 px de ancho*/
+/*pantalla de 777px para abajo*/
+@media(max-width: 850px){
+     .cont-formulario{
+        top: 15px;
+        width: 360px;
+        height: 600px;
+        left: 200px;
+     }
+     .login-form{
+        left: 50px;
+        top: 300px;
+     }
+     .registrar-form{
+        left: 50px;
+        top: 300px;
+     }
+     .hc{
+        width: 400px;
+     }
+     .agre1{
+        transform: translateX(150px);
+     }
+     .bsw input[id="buscar"]{
+        transform: translateX(-15%);
+     }
+}
+@media(max-width: 620px){
+    .cont-formulario{
+        left: 40px;
+    }
+    .hc{
+        width: 350px;
+        left: 50px;
+    }
+}
+@media(max-width: 400px){
+    .cont-formulario{
+        width: 250px;
+        left: 20px;
+        height: 550px;
+    }
+    .boton{
+        left: 70px;
+    }
+    .ir-login h1[name="lg"]{
+        font-size: 25px;
+        padding-right: 100px;
+    }
+    .ir-login p[name="in-lg"]{
+      position: relative;
+      width: 200px;
+      left: 30px;
+    }
+    .registrar-form{
+        left: 5px;
+        top: 270px;
+        font-size: 15px;
+    }
+    .login-form{
+        left: 5px;
+        top: 270px;
+        font-size: 15px;
+    }
+    .hc{
+        left: 50px;
+        width: 250px;
+
+    }
+}
+/* termino pantalla de 777px para abajo*/
+/*termino de responsive*/

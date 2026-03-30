@@ -1,0 +1,12 @@
+{
+    "12": {
+        "nombre": "audifonos",
+        "cantidad": 20,
+        "precio": 50.0
+    },
+    "13": {
+        "nombre": "pera",
+        "cantidad": 100,
+        "precio": 200.0
+    }
+}
